@@ -10,7 +10,7 @@ socket.emit('getAll');
 socket.on('help-need', payload => {
     setTimeout(() => {
         socket.emit('received', payload);
-        console.log(`REQUEST: ${payload.studentName} is requesting help @ table# ${payload.tableNumber}`);
+        console.log(`REQUEST*****: ${payload.studentName} is requesting help @ table# ${payload.tableNumber}`);
         socket.emit('inProgress', payload);
     }, 4000);
 })
@@ -24,7 +24,7 @@ socket.on('helping', payload => {
 
 socket.on('finished', payload => {
     setTimeout(() => {
-      console.log(`LEFT====: ${payload.TA},left!`)
+      console.log(`LEFT*****: ${payload.TA},left!`)
     }, 6000);
 })
 

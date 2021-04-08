@@ -14,12 +14,12 @@ setInterval(() => {
 }, 4000)
 
 socket.on('help-need', (payload) => {
-  console.log(` ${payload.TA} help you soon!`);
+  console.log(`***** ${payload.TA} help you soon!`);
 });
 
 socket.on('finished', payload => {
   setTimeout(() => {
-    console.log(`${payload.studentName}, I hope you get help, have a wonderful LAB WORK!`)
+    console.log(`***** ${payload.studentName}, I hope you get help, have a wonderful LAB WORK!`)
   }, 7000);
 })
 
@@ -33,4 +33,4 @@ class Student {
 }
 
 
-console.log('student-LIVE');
+console.log('STUDENTS-LIVE');
