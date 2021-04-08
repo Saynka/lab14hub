@@ -1,0 +1,20 @@
+{
+  "name": "support",
+  "version": "1.0.0",
+  "description": "",
+  "main": "support.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "node support.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "faker": "^5.5.2",
+    "jest": "^26.6.3",
+    "socket.io": "^4.0.1",
+    "socket.io-client": "^4.0.1"
+  }
+}
