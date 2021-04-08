@@ -17,14 +17,14 @@ support.on('connection', socket => {
 
   socket.on('help-need', payload => {
     Queue.received[payload.supportId] = payload;
-    logger('Help-need<====>', payload);
+    logger('Help-need *****', payload);
 
     support.emit('help-need', payload);
   })
 
   socket.on('inProgress', payload => {
     Queue.inProgress[payload.supportId] = payload;
-    logger('InProgress <===>', payload);
+    logger('InProgress *****', payload);
     socket.emit('helping', payload);
   })
 
@@ -50,7 +50,7 @@ support.on('connection', socket => {
 
   socket.on('completed', payload => {
     Queue.completed[payload.supportId] = payload;
-    logger('Help-need Completed<===>', payload)
+    logger('Help-need Completed *****', payload)
 
     support.emit('finished', payload);
   })
