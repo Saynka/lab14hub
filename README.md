@@ -4,6 +4,7 @@
 
 ### Author: Nassir Abegas, Kale Lesko
 
+
 ### Links and Resources
 
 - [ci/cd](https://github.com/Saynka/lab14hub/actions) (GitHub Actions)
@@ -71,4 +72,4 @@
 
 #### UML
 
-![UML Example](./reference/uml-1.png)
+![UML Example](./assets/UML.png)
