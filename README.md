@@ -6,6 +6,9 @@ This is a real time communication application between TA and students and the hu
 
 ### Author: Nassir Abegas, Kale Lesko
 
+- This is a real time communication application between TA and students and the hub ensure messaging between them. the hub.js(hub-server) moderates the activities between the TA and the students. when the students need-help, the TA will get the notification and also the students get notifications when the TA is on the way to help the student. when the TA is finished helping. it will send the student a appreciation message.
+
+
 ### Links and Resources
 
 - [ci/cd](https://github.com/Saynka/lab14hub/actions) (GitHub Actions)
@@ -73,4 +76,4 @@ This is a real time communication application between TA and students and the hu
 
 #### UML
 
-![UML Example](./reference/uml-1.png)
+![UML Example](./assets/UML.png)

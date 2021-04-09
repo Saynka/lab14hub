@@ -15,14 +15,19 @@ support.on('connection', socket => {
 
   socket.on('help-need', payload => {
     Queue.received[payload.supportId] = payload;
+
     logger('Help-Needed *****', payload);
+    
+
 
     support.emit('help-need', payload);
   })
 
   socket.on('inProgress', payload => {
     Queue.inProgress[payload.supportId] = payload;
+
     logger('In-Progress *****', payload);
+   
     socket.emit('helping', payload);
   })
 
@@ -33,6 +38,9 @@ support.on('connection', socket => {
     support.emit('completed', payload);
   })
 
+
+
+  
 
   socket.on('getAll', () => {
     for (let key in Queue.received) {
@@ -48,7 +56,10 @@ support.on('connection', socket => {
 
   socket.on('completed', payload => {
     Queue.completed[payload.supportId] = payload;
-    logger('Completed *****', payload)
+
+
+    logger('Help-need Completed *****', payload)
+
 
     support.emit('finished', payload);
   })
@@ -61,6 +72,7 @@ function logger(EVENT, payload) {
   console.log({ EVENT, time, payload });
 }
 
+
 console.log('HUB-LIVE');
 
-module.exports = logger;
+
