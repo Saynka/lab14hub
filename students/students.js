@@ -14,7 +14,8 @@ setInterval(() => {
 }, 4000)
 
 socket.on('help-need', (payload) => {
-  console.log(`***** ${payload.TA} help you soon!`);
+console.log(`***** Your TA ${payload.TA} will help you soon ${payload.studentName} `);
+
 });
 
 socket.on('finished', payload => {
