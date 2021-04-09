@@ -22,7 +22,7 @@ socket.on('helping', payload => {
 
 socket.on('finished', payload => {
     setTimeout(() => {
-      console.log(`LEFT*****: ${payload.TA},left!`)
+        console.log(`LEFT*****: your TA ${payload.TA}, has Finished! @ Table# ${payload.tableNumber}`)
     }, 6000);
 })
 
