@@ -1,40 +1,32 @@
-('use strict');
 
-
-const faker = require('faker');
+'use strict';
 const io = require('socket.io-client');
-const studentURL = 'http://localhost:3000/support';
-
-const socket = io.connect(studentURL);
+const faker = require('faker');
+const socket = io.connect('http://localhost:3000/support');
 
 socket.emit('getAll');
 
 setInterval(() => {
-  const newObj = new Student()
-  socket.emit('help-need', newObj)
-
-}, 3000);
+  const newObj = new Student();
+  socket.emit('help-need', newObj);
+}, 4000);
 
 socket.on('help-need', (payload) => {
-  console.log(`${payload.jobTitle} ${payload.TA} HELP YOU SOON!!!!!`)
-})
-
-
-socket.on('conclusion', (payload) => {
-  setTimeout(() => {
-    console.log(`we hope you enjoyed our help ${payload.studentName} have a wonderful day`);
-  },6000)
+  console.log(`***** Your TA ${payload.TA} will help you soon ${payload.studentName} `);
 });
 
+socket.on('finished', payload => {
+  setTimeout(() => {
+    console.log(`***** ${payload.studentName}, I hope you got help, have a wonderful LAB WORK!`)
+  }, 7000);
+});
 class Student {
   constructor() {
-    this.studentName = faker.name.findName()
-    this.supportID = faker.address.zipCode(),
-      // this.tableNumber = faker.music.genre()
-      this.tableNumber =faker.datatype.number()
-    this.jobTitle = faker.name.title()
-    this.TA = faker.name.findName()
+    this.studentName = faker.name.firstName(),
+      this.supportID = faker.address.zipCode(),
+      this.tableNumber = faker.datatype.number(),
+      this.TA = faker.name.firstName()
   }
-}
+};
 
-console.log('student-LIVE');
+console.log('STUDENTS-LIVE');
