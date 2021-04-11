@@ -2,7 +2,7 @@
 
 ## Project: Event Driven Applications
 
-### Author: Nassir Abegas, Kale Lesko
+### Author: Nassir Abegaz, Kale Lesko
 
 - This is a real time communication application between TA and students and the hub ensure messaging between them. the hub.js(hub-server) moderates the activities between the TA and the students. when the students need-help, the TA will get the notification and also the students get notifications when the TA is on the way to help the student. when the TA is finished helping. it will send the student a appreciation message.
 
