@@ -2,7 +2,12 @@
 
 ## Project: Event Driven Applications
 
+
 ### Author: Nassir Abegaz, Kale Lesko
+
+This is a real time communication application between TA and students and the hub ensure messaging between them. the hub.js(hub-server) moderates the activities between the TA and the students. when the students need-help, the TA will get the notification and also the students get notifications when the TA is on the way to help the student. when the TA is finished helping. it will send the student a appreciation message.
+
+
 
 - This is a real time communication application between TA and students and the hub ensure messaging between them. the hub.js(hub-server) moderates the activities between the TA and the students. when the students need-help, the TA will get the notification and also the students get notifications when the TA is on the way to help the student. when the TA is finished helping. it will send the student a appreciation message.
 
@@ -10,8 +15,8 @@
 ### Links and Resources
 
 - [ci/cd](https://github.com/Saynka/lab14hub/actions) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
+<!-- - [back-end server url](http://xyz.com) (when applicable)
+- [front-end application](http://xyz.com) (when applicable) -->
 
 ### Setup
 
